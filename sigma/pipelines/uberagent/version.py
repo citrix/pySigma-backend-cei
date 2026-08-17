@@ -14,10 +14,11 @@ UA_VERSION_7_3 = "7.3.0"
 UA_VERSION_7_4 = "7.4.0"
 UA_VERSION_7_5 = "7.5.0"
 UA_VERSION_8_0 = "8.0.0"
+UA_VERSION_8_1 = "8.1.0"
 
 # Represents the next upcoming version
 UA_VERSION_DEVELOP = "develop"
-UA_VERSION_CURRENT_RELEASE = UA_VERSION_8_0
+UA_VERSION_CURRENT_RELEASE = UA_VERSION_8_1
 
 
 class Version:
@@ -79,6 +80,9 @@ class Version:
     
     def is_version_8_0_or_newer(self) -> bool:
         return self.is_version_develop() or self._version() >= self._version_tuple(UA_VERSION_8_0)
+
+    def is_version_8_1_or_newer(self) -> bool:
+        return self.is_version_develop() or self._version() >= self._version_tuple(UA_VERSION_8_1)
 
     def is_version_develop(self) -> bool:
         return self._outputVersion == UA_VERSION_DEVELOP
@@ -165,6 +169,9 @@ class Version:
         if self.is_version_8_0_or_newer() and field.version == UA_VERSION_8_0:
             return True
 
+        if self.is_version_8_1_or_newer() and field.version == UA_VERSION_8_1:
+            return True
+
         if self.is_version_develop() and field.version == UA_VERSION_DEVELOP:
             return True
 
@@ -210,6 +217,9 @@ class Version:
             return True
 
         if self.is_version_8_0_or_newer() and logsource.version == UA_VERSION_8_0:
+            return True
+
+        if self.is_version_8_1_or_newer() and logsource.version == UA_VERSION_8_1:
             return True
 
         if self.is_version_develop() and logsource.version == UA_VERSION_DEVELOP:
