@@ -1,5 +1,4 @@
-![Tests](https://github.com/vastlimits/pySigma-backend-uberAgent/actions/workflows/test.yml/badge.svg)
-![Coverage Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/svnscha/771a36a467fe196af4b6c9635ff1a12a/raw/vastlimits-pySigma-backend-uberAgent.json)
+![Tests](https://github.com/citrix/pySigma-backend-cei/actions/workflows/test.yml/badge.svg)
 ![Status](https://img.shields.io/badge/Status-pre--release-orange)
 
 # pySigma uberAgent Backend
