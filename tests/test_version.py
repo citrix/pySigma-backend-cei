@@ -14,6 +14,7 @@ from sigma.pipelines.uberagent.version import (
     UA_VERSION_7_5,
     UA_VERSION_8_0,
     UA_VERSION_8_1,
+    UA_VERSION_9_0,
     UA_VERSION_CURRENT_RELEASE,
     UA_VERSION_DEVELOP,
     Version,
@@ -32,6 +33,7 @@ RELEASE_VERSIONS = [
     UA_VERSION_7_5,
     UA_VERSION_8_0,
     UA_VERSION_8_1,
+    UA_VERSION_9_0,
 ]
 ALL_VERSIONS = RELEASE_VERSIONS + [UA_VERSION_DEVELOP]
 
@@ -128,6 +130,14 @@ def test_version_8_1(version, expected):
 
 @pytest.mark.parametrize(
     "version,expected",
+    [(version, is_version_at_least(version, UA_VERSION_9_0)) for version in ALL_VERSIONS],
+)
+def test_version_9_0(version, expected):
+    assert Version(version).is_version_9_0_or_newer() == expected
+
+
+@pytest.mark.parametrize(
+    "version,expected",
     [(version, version == UA_VERSION_DEVELOP) for version in ALL_VERSIONS],
 )
 def test_version_develop(version, expected):
@@ -166,4 +176,4 @@ def test_logsource_supported(logsource_version, version, expected):
 
 
 def test_current_release():
-    assert UA_VERSION_CURRENT_RELEASE == UA_VERSION_8_1
+    assert UA_VERSION_CURRENT_RELEASE == UA_VERSION_9_0
