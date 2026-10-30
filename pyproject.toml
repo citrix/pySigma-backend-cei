@@ -2,7 +2,7 @@
 name = "pySigma-backend-uberAgent"
 version = "0.3.74"
 description = "pySigma uAQL backend"
-authors = ["vast limits GmbH <info@vastlimits.com>"]
+authors = ["Citrix Systems, Inc. <info@citrix.com>"]
 license = "MIT"
 repository = "https://github.com/citrix/pySigma-backend-cei"
 packages = [
