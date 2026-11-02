@@ -1,4 +1,4 @@
-from .uberagent import uberagent, uberagent600, uberagent610, uberagent620, uberagent700, uberagent710, uberagent720, uberagent730, uberagent740, uberagent750, uberagent800, uberagent810, uberagent_develop
+from .uberagent import uberagent, uberagent600, uberagent610, uberagent620, uberagent700, uberagent710, uberagent720, uberagent730, uberagent740, uberagent750, uberagent800, uberagent810, uberagent900, uberagent_develop
 
 pipelines = {
     "uberagent": uberagent,
@@ -13,5 +13,6 @@ pipelines = {
     "uberagent-7.5.0": uberagent750,
     "uberagent-8.0.0": uberagent800,
     "uberagent-8.1.0": uberagent810,
+    "uberagent-9.0.0": uberagent900,
     "uberagent-develop": uberagent_develop
 }
